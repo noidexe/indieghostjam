@@ -1,0 +1,15 @@
+{
+	"game":[
+		{
+			"type": "image",
+			"key": "cachito",
+			"url": "assets/img/cachito.png"
+		},
+		{
+			"type": "image",
+			"key": "coquito",
+			"url": "assets/img/coquito.png"
+		}
+
+	]
+}
