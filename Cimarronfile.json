@@ -1,0 +1,15 @@
+{
+    "host": "0.0.0.0",
+    "port": 8000,
+    "enable_header": true,
+    "enable_logging": true,
+    "routes": {
+      "/": "./src/",
+      "/lib/phaser/": "../phaser/dist/",
+      "/docs/": "../phaser/docs/"
+    },
+    "browse": [
+        "/",
+        "/docs/"
+    ]
+}
