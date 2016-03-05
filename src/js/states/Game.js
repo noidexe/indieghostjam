@@ -1,6 +1,6 @@
-var IGG = IGG || {};
+var IGJ = IGJ || {};
 
-IGG.Game = function () {
+IGJ.Game = function (game) {
     //  When a State is added to Phaser it automatically has the following properties set on it, even if they already exist:
 /*
     this.game;      //  a reference to the currently running game
@@ -21,19 +21,49 @@ IGG.Game = function () {
     this.rnd;       //  the repeatable random number generator*/
 };
 
-IGG.Game.prototype = {
+IGJ.Game.prototype = {
 
     preload: function () {
     },
 
     create: function () {
+
+        this.good = [1,3,5];
+
+        this.score = 0;
+        this.scoreTxt = this.game.add.bitmapText(10,10, 'gochi', 'Score: ' + this.score, 30);
+
         this.game.input.gamepad.start();
+        IGJ.Input.init(game);
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.game.physics.setBoundsToWorld();
+
+        this.cachito = IGJ.Player(game);
+        this.cachito.add();
+        this.cachito.sprite.animations.play('idle');
+        this.game.stage.backgroundColor = "#aaaaff";
+
+        this.comida = IGJ.Comida(game);
+        this.comida.start();
     },
 
     update: function () {
+        this.cachito.update();
+        this.comida.emitter.forEachAlive(this.collide, this);
+    },
+
+    collide: function (sprite) {
+        if(this.cachito.collides(sprite)) {
+            sprite.kill();
+            if(this.good.indexOf(sprite.frame) === -1 ) {
+                this.score+=100;
+            } 
+            else {
+                this.score-=200;
+            }
+            this.scoreTxt.setText('Score: ' + this.score);
+        }
     },
 
     shutdown: function () {

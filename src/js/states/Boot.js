@@ -14,8 +14,8 @@ IGJ.Boot.prototype = {
     create: function () {
         this.game.input.gamepad.start();
 
-        this.game.state.add('Preloader', IGG.Preloader);
-        this.game.state.add('Game', IGG.Game);
+        this.game.state.add('Preloader', IGJ.Preloader);
+        this.game.state.add('Game', IGJ.Game);
 
         this.game.scale.scaleMode = Phaser.ScaleManager.NOSCALE;
         this.game.scale.minWidth = 320;

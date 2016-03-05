@@ -1,0 +1,40 @@
+{
+"frames": [
+	{"filename":"papa00.png",
+		"frame": {"x":102, "y":60, "w":33, "h":44},
+		"spriteSourceSize": {"x":4,"y":14,"w":45,"h":61},
+		"sourceSize": {"w":45,"h":61}
+	},
+	{"filename":"papa01.png",
+		"frame": {"x":102, "y":0, "w":39, "h":59},
+		"spriteSourceSize": {"x":4,"y":2,"w":45,"h":61},
+		"sourceSize": {"w":45,"h":61}
+	},
+	{"filename":"pollo00.png",
+		"frame": {"x":0, "y":164, "w":63, "h":72},
+		"spriteSourceSize": {"x":1,"y":5,"w":67,"h":79},
+		"sourceSize": {"w":67,"h":79}
+	},
+	{"filename":"pollo01.png",
+		"frame": {"x":64, "y":164, "w":61, "h":72},
+		"spriteSourceSize": {"x":2,"y":5,"w":67,"h":79},
+		"sourceSize": {"w":67,"h":79}
+	},
+	{"filename":"zana00.png",
+		"frame": {"x":0, "y":82, "w":101, "h":81},
+		"spriteSourceSize": {"x":2,"y":2,"w":103,"h":85},
+		"sourceSize": {"w":103,"h":85}
+	},
+	{"filename":"zana01.png",
+		"frame": {"x":0, "y":0, "w":101, "h":81},
+		"spriteSourceSize": {"x":2,"y":2,"w":103,"h":85},
+		"sourceSize": {"w":103,"h":85}
+	}
+
+],
+"meta": {
+	"image": "pichon_atlas.png",
+	"size": {"w": 256, "h": 256},
+	"scale": "1"
+}
+}

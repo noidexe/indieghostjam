@@ -1,15 +1,37 @@
 {
-	"game":[
-		{
-			"type": "image",
-			"key": "cachito",
-			"url": "assets/img/cachito.png"
-		},
-		{
-			"type": "image",
-			"key": "coquito",
-			"url": "assets/img/coquito.png"
-		}
-
-	]
+    "game":[
+        {
+            "type": "atlasJSONArray",
+            "key": "cachito",
+            "textureURL": "assets/img/anim.png",
+            "atlasURL": "assets/img/anim.json"
+        },
+        {
+            "type": "atlasJSONArray",
+            "key": "comida",
+            "textureURL": "assets/img/comida.png",
+            "atlasURL": "assets/img/comida.json"
+        },
+        {
+            "type": "bitmapFont",
+            "key": "gochi",
+            "textureURL": "assets/fonts/Gochi.png",
+            "atlasURL": "assets/fonts/Gochi.xml",
+            "atlasData": null,
+            "xSpacing": 0,
+            "ySpacing": 0
+        },
+        {
+            "type": "image",
+            "key": "olla",
+            "url": "assets/img/olla.png"
+        }
+    ],
+    "meta": {
+        "generated": "1401380327373",
+        "version": "1.0",
+        "app": "Phaser Asset Packer",
+        "url": "http://phaser.io",
+        "copyright": "Photon Storm Ltd. 2014"
+    }
 }

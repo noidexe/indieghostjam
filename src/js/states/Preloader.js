@@ -1,11 +1,11 @@
-var IGG = IGG || {};
+var IGJ = IGJ || {};
 
-IGG.Preloader = function (game) {
+IGJ.Preloader = function (game) {
     this.game = game;
     this.ready = false;
 };
 
-IGG.Preloader.prototype = {
+IGJ.Preloader.prototype = {
 
     preload: function () {
         this.preloadBar = this.add.sprite(0,0, 'preloaderBar');
@@ -20,12 +20,12 @@ IGG.Preloader.prototype = {
         this.loadText.anchor.setTo(0.5,0.5);
         this.load.setPreloadSprite(this.preloadBar);
 
+        //this.game.load.atlas('cachito','assets/img/anim.png','assets/img/anim.json');
+        this.game.load.pack('game', 'assets/pack.json', null, this);
     },
 
     create: function () {
         this.preloadBar.cropEnabled = false;
-
-        this.game.load.pack('game', 'assets/pack.json', null, this);
     },
 
     update: function () {
