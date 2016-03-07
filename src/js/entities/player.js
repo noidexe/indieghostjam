@@ -4,7 +4,7 @@ IGJ.Player = function(game) {
 	var setup = {
 		x: 400,
 		y: 650,
-		offsetOlla: -135,
+		offsetOlla: -115,
         speed: 10
 	};
 	
@@ -46,7 +46,7 @@ IGJ.Player = function(game) {
         
     var _animateOlla = function() {
         _olla.y += _dirOlla;
-        if(_olla.y > -130 || _olla.y < -140) {
+        if(_olla.y > -100 || _olla.y < -120) {
             _dirOlla = _dirOlla * -1;
         }
     };
