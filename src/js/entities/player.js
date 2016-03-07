@@ -67,40 +67,35 @@ IGJ.Player = function(game) {
         _olla.y = setup.offsetOlla;
     };
 
-	var player = {
-        get sprite () {
-        	return _sprite;
-        },
-        get x () {
-        	return _group.x;
-        },
-        set x (x) { 
-        	return _group.x = x;
-        },
-        get y () {
-        	return _group.y;
-        },
-        set y (y) {
-        	return _group.y = y;
-        },
-        add: function() {
-        	game.add.existing(_group);
-        	_group.add(_olla);
-        	_group.add(_sprite);
-        },
-        anims: _sprite.animations,
-        collides: function(sprite) {
-            if ( Math.abs(_olla.world.x - sprite.x) < 50 && Math.abs(_olla.world.y -60 - sprite.y) < 20 ) {
-                _makeSplash(_olla, 0,-80);
-                return true;
-            }
-            return false;
-        },
-        update: function() {
-            _move();
-            _animate();
-        }
-	};
+    this.sprite = _sprite;
+    Object.defineProperty(this, 'x', {
+        get: function() {return _group.x },
+        set: function(x) {_group.x = x}
+    });
+    Object.defineProperty(this, 'y', {
+        get: function() {return _group.y },
+        set: function(y) {_group.y = y}
+    });
+    
+    this.add = function() {
+    	game.add.existing(_group);
+    	_group.add(_olla);
+    	_group.add(_sprite);
+    };
 
-	return player
+    this.anims = _sprite.animations;
+
+    this.collides = function(sprite) {
+        if ( Math.abs(_olla.world.x - sprite.x) < 50 && Math.abs(_olla.world.y -60 - sprite.y) < 20 ) {
+            _makeSplash(_olla, 0,-80);
+            return true;
+        }
+        return false;
+    };
+
+    this.update = function() {
+        _move();
+        _animate();
+    };
+
 }

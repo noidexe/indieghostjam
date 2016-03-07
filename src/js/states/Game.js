@@ -39,7 +39,7 @@ IGJ.Game.prototype = {
 
         this.game.physics.setBoundsToWorld();
 
-        this.cachito = IGJ.Player(game);
+        this.cachito = new IGJ.Player(game);
         this.cachito.add();
         this.cachito.sprite.animations.play('idle');
         this.game.stage.backgroundColor = "#aaaaff";
