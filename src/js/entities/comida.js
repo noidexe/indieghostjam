@@ -6,7 +6,7 @@ IGJ.Comida = function(game) {
 		y: 200,
 	};
 	
-	var emitter = game.add.emitter(game, 200, 200, 25);
+	var emitter = game.add.emitter(game, 200, 200);
     emitter.emitX = game.width-50;
     emitter.emitY = 300;
     emitter.makeParticles('comida', [0,1,2,3,4,5,6,7], 200, false, false);
@@ -38,7 +38,7 @@ IGJ.Comida = function(game) {
         add: function() {
         },
         start: function() {
-            emitter.start(false, 10000, 100);
+            emitter.start(false, 5000, 200);
         },
         update: function() {
         }
