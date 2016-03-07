@@ -44,7 +44,7 @@ IGJ.Game.prototype = {
         this.cachito.sprite.animations.play('idle');
         this.game.stage.backgroundColor = "#aaaaff";
 
-        this.comida = IGJ.Comida(game);
+        this.comida = new IGJ.Comida(game);
         this.comida.start();
     },
 
