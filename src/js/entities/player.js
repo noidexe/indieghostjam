@@ -23,18 +23,6 @@ IGJ.Player = function(game) {
 	_sprite.animations.add('idle',[0,1,2,3,4,5],8,true);
 	_sprite.animations.add('run',[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],24,true);
 
-    var _makeSplash = function(parent, x,y) {
-        var _sprite = new Phaser.Sprite(game, 0,0,'splash');
-        _sprite.anchor.setTo(0.5,0.5);
-        _sprite.animations.add('splash', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14], 24);
-        parent.addChild(_sprite);
-        _sprite.x = x;
-        _sprite.y = y;
-        _sprite.animations.play('splash').onComplete.addOnce(function() {
-            this.destroy();
-        }, _sprite);
-    };
-
     var _move = function () {
         _group.x += setup.speed * IGJ.Input.state;
     };
@@ -68,6 +56,7 @@ IGJ.Player = function(game) {
     };
 
     this.sprite = _sprite;
+    this.olla = _olla;
     Object.defineProperty(this, 'x', {
         get: function() {return _group.x },
         set: function(x) {_group.x = x}
@@ -84,14 +73,6 @@ IGJ.Player = function(game) {
     };
 
     this.anims = _sprite.animations;
-
-    this.collides = function(sprite) {
-        if ( Math.abs(_olla.world.x - sprite.x) < 50 && Math.abs(_olla.world.y -60 - sprite.y) < 20 ) {
-            _makeSplash(_olla, 0,-80);
-            return true;
-        }
-        return false;
-    };
 
     this.update = function() {
         _move();

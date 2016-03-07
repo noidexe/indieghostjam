@@ -46,6 +46,8 @@ IGJ.Game.prototype = {
 
         this.comida = new IGJ.Comida(game);
         this.comida.start();
+
+        this.ollapos = this.cachito.olla.world;
     },
 
     update: function () {
@@ -54,7 +56,8 @@ IGJ.Game.prototype = {
     },
 
     collide: function (sprite) {
-        if(this.cachito.collides(sprite)) {
+        if(Math.abs(this.ollapos.x - sprite.x) < 50 && Math.abs(this.ollapos.y -60 - sprite.y) < 20 ) {
+            this.makeSplash(this.cachito.olla, 0,-80);
             sprite.kill();
             if(this.good.indexOf(sprite.frame) === -1 ) {
                 this.score+=100;
@@ -64,6 +67,18 @@ IGJ.Game.prototype = {
             }
             this.scoreTxt.setText('Score: ' + this.score);
         }
+    },
+
+    makeSplash: function(parent, x,y) {
+            var _sprite = new Phaser.Sprite(game, 0,0,'splash');
+            _sprite.anchor.setTo(0.5,0.5);
+            _sprite.animations.add('splash', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14], 24);
+            parent.addChild(_sprite);
+            _sprite.x = x;
+            _sprite.y = y;
+            _sprite.animations.play('splash').onComplete.addOnce(function() {
+                this.destroy();
+            }, _sprite);
     },
 
     shutdown: function () {
