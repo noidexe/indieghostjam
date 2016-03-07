@@ -1,0 +1,85 @@
+{
+"frames": [
+	{"filename":"splash0000.png",
+		"frame": {"x":0, "y":464, "w":29, "h":9},
+		"spriteSourceSize": {"x":80,"y":79,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0001.png",
+		"frame": {"x":0, "y":450, "w":36, "h":13},
+		"spriteSourceSize": {"x":77,"y":75,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0002.png",
+		"frame": {"x":0, "y":430, "w":53, "h":19},
+		"spriteSourceSize": {"x":67,"y":69,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0003.png",
+		"frame": {"x":0, "y":328, "w":70, "h":27},
+		"spriteSourceSize": {"x":58,"y":62,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0004.png",
+		"frame": {"x":0, "y":261, "w":80, "h":33},
+		"spriteSourceSize": {"x":55,"y":56,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0005.png",
+		"frame": {"x":0, "y":295, "w":72, "h":32},
+		"spriteSourceSize": {"x":60,"y":57,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0006.png",
+		"frame": {"x":0, "y":474, "w":19, "h":31},
+		"spriteSourceSize": {"x":83,"y":57,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0007.png",
+		"frame": {"x":69, "y":356, "w":29, "h":56},
+		"spriteSourceSize": {"x":80,"y":31,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0008.png",
+		"frame": {"x":54, "y":430, "w":42, "h":68},
+		"spriteSourceSize": {"x":71,"y":19,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0009.png",
+		"frame": {"x":0, "y":356, "w":68, "h":73},
+		"spriteSourceSize": {"x":60,"y":16,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0010.png",
+		"frame": {"x":0, "y":184, "w":97, "h":76},
+		"spriteSourceSize": {"x":45,"y":11,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0011.png",
+		"frame": {"x":0, "y":140, "w":127, "h":43},
+		"spriteSourceSize": {"x":31,"y":9,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0012.png",
+		"frame": {"x":0, "y":94, "w":146, "h":45},
+		"spriteSourceSize": {"x":21,"y":17,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0013.png",
+		"frame": {"x":0, "y":51, "w":155, "h":42},
+		"spriteSourceSize": {"x":11,"y":43,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	},
+	{"filename":"splash0014.png",
+		"frame": {"x":0, "y":0, "w":183, "h":50},
+		"spriteSourceSize": {"x":6,"y":65,"w":194,"h":128},
+		"sourceSize": {"w":194,"h":128}
+	}
+
+],
+"meta": {
+	"image": "pichon_atlas.png",
+	"size": {"w": 256, "h": 512},
+	"scale": "1"
+}
+}

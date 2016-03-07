@@ -13,6 +13,16 @@
             "atlasURL": "assets/img/comida.json"
         },
         {
+            "type": "spritesheet",
+            "key": "splash",
+            "url": "assets/img/splash.png",
+            "frameWidth": 194,
+            "frameHeight": 128,
+            "frameMax": 14,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
             "type": "bitmapFont",
             "key": "gochi",
             "textureURL": "assets/fonts/Gochi.png",
