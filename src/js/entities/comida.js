@@ -9,7 +9,7 @@ IGJ.Comida = function(game) {
 	this.emitter = game.add.emitter(game, 200, 200);
     this.emitter.emitX = game.width-50;
     this.emitter.emitY = 300;
-    this.emitter.makeParticles('comida', [0,1,2,3,4,5,6,7], 200, true, true);
+    this.emitter.makeParticles('comida', [0,1,2,3,4,5,6,7], 200, false, false);
     //emitter.scale.setTo(0.75,0.75);
     this.emitter.minParticleSpeed.setTo(-50, -500);
     this.emitter.maxParticleSpeed.setTo(-450, -800);
@@ -20,6 +20,6 @@ IGJ.Comida = function(game) {
     this.emitter.setSize(10,10);
 
     this.start = function() {
-        this.emitter.start(false, 3000, 100);
+        this.emitter.start(false, 4000, 100);
     };
 }
